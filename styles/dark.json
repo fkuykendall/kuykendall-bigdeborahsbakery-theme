@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "color": {
+      "palette": [
+        { "slug": "accent-3", "color": "#AFD5AA", "name": "Celadon" },
+        { "slug": "base", "color": "#2B2620", "name": "Deep Bark" },
+        { "slug": "contrast", "color": "#F4EFEA", "name": "Alabastor" },
+        { "slug": "accent-2", "color": "#A69F98", "name": "Silver" },
+        { "slug": "accent-1", "color": "#E09F9F", "name": "Wild Rose" }
+      ]
+    },
+    "typography": {
+      "fontFamilies": [
+        { "slug": "heading", "name": "Heading", "fontFamily": "Georgia, 'Times New Roman', serif" },
+        { "slug": "body", "name": "Body", "fontFamily": "system-ui, -apple-system, 'Segoe UI', sans-serif" }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var:preset|color|base",
+      "text": "var:preset|color|contrast"
+    },
+    "typography": { "fontFamily": "var:preset|font-family|body" },
+    "elements": {
+      "heading": { "typography": { "fontFamily": "var:preset|font-family|heading" } },
+      "link": { "color": { "text": "var:preset|color|accent-1" } }
+    },
+    "blocks": {
+      "core/button": {
+        "color": { "background": "var:preset|color|contrast", "text": "var:preset|color|base" },
+        "border": { "radius": "4px" }
+      }
+    }
+  }
+}

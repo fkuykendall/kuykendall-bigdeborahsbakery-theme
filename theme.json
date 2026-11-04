@@ -1,0 +1,81 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "color": {
+      "palette": [
+        { "slug": "accent-3", "color": "#AFD5AA", "name": "Celadon" },
+        { "slug": "base", "color": "#F0F2EF", "name": "White Smoke" },
+        { "slug": "contrast", "color": "#5C5346", "name": "Stone Brown" },
+        { "slug": "accent-2", "color": "#A69F98", "name": "Silver" },
+        { "slug": "accent-1", "color": "#8C6057", "name": "Smoky Rose" }
+      ]
+    },
+
+    "typography": {
+      "fontFamilies": [
+        { "slug": "heading", "name": "Heading", "fontFamily": "Georgia, 'Times New Roman', serif" },
+        { "slug": "body", "name": "Body", "fontFamily": "system-ui, -apple-system, 'Segoe UI', sans-serif" },
+        {
+          "name": "Gilda Display",
+          "slug": "gilda-display",
+          "fontFamily": "\"Gilda Display\", serif",
+          "fontFace": [
+            {
+              "fontFamily": "Gilda Display",
+              "fontWeight": "400 700",
+              "fontStyle": "normal",
+              "src": [
+                "file:./assets/fonts/GildaDisplay-Regular.ttf"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Montserrat",
+          "slug": "montserrat",
+          "fontFamily": "\"Montserrat\", sans-serif",
+          "fontFace": [
+            {
+              "fontFamily": "Montserrat",
+              "fontWeight": "400 700",
+              "fontStyle": "normal",
+              "src": [
+                "file:./assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  
+  "styles": {
+    "color": {
+      "background": "var:preset|color|base",
+      "text": "var:preset|color|contrast"
+    },
+    "typography": { "fontFamily": "var:preset|font-family|body" },
+    "elements": {
+      "heading": { "typography": { "fontFamily": "var:preset|font-family|heading" } },
+      "link": { "color": { "text": "var:preset|color|accent-1" } }
+    },
+    "blocks": {
+      "core/button": {
+        "color": { "background": "var:preset|color|contrast", "text": "var:preset|color|base" },
+        "border": { "radius": "4px" }
+      },
+        "core/comments-pagination": {
+        "spacing": {
+            "margin": {
+                "bottom": "var(--wp--preset--spacing--40)",
+                "top": "var(--wp--preset--spacing--40)"
+            }
+        },
+        "typography": {
+            "fontSize": "var(--wp--preset--font-size--medium)"
+        }
+    }
+    }
+  }
+}
